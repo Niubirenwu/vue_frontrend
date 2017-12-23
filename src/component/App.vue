@@ -1,13 +1,20 @@
 <template>
   <div>
-     大头儿子，小头爸爸
+    <app-head></app-head>
+    <router-view></router-view>
+    <app-foot></app-foot>
   </div>
 </template>
 
 <script>
-  export default {
-    
-  }
+import HeaderComponent from "./frame/header.vue";
+import FooterComponent from "./frame/footer.vue"
+export default {
+    components:{
+      'app-head':HeaderComponent,
+      'app-foot':FooterComponent
+    }
+};
 </script>
 
 <style scoped>
